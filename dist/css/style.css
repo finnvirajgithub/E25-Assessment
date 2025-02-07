@@ -1,0 +1,87 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap");
+@import url("https://cdn.jsdelivr.net/npm/boxicons@2.1.4/css/boxicons.min.css");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "DM Sans";
+}
+
+.icon-images {
+  width: 50px;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+.section-one {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: row;
+  color: #000743;
+  width: 100vw;
+  height: 100vh;
+  font-size: 25px;
+}
+.section-one .box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  flex: 1;
+}
+.section-one .box .text-heading {
+  line-height: 1;
+  margin-bottom: 20px;
+}
+.section-one .box .text-subheading {
+  font-weight: 100;
+  margin: auto 15px;
+}
+.section-one .box .btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: row;
+  background-color: #FF3366;
+  border: 0;
+  font-weight: 600;
+  color: #fff;
+  margin-top: 40px;
+  font-family: "DM Sans";
+  padding: 10px 15px;
+  border-radius: 5px;
+}
+.section-one .box .btn .icon {
+  font-size: 15px;
+  margin-left: 10px;
+}
+.section-one .box1 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  margin: auto 30px;
+}
+.section-one .box1 .icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: row;
+  width: 125px;
+  height: 125px;
+  margin: 2px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+}
+.section-one .box1 .icons:hover {
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
+}/*# sourceMappingURL=style.css.map */

@@ -67,19 +67,22 @@ body {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         grid-template-rows: repeat(4, 1fr);
-        margin: auto 30px;
+        justify-items: center;
+        padding: 50px;
 
         .icons {
             @include flex-center(row);
-            width: 125px;
-            height: 125px;
-            margin: 2px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            width: 100px;
+            height: 100px;
+            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15); 
             transition: box-shadow 0.3s ease;
-
-            &:hover {
-                box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15); 
-            }
+            margin-right: 0;
+            
         }
+    }
+
+    .box2 {
+        padding: auto 100px;
+        margin: auto 50px;
     }
 }

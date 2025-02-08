@@ -68,7 +68,8 @@ body {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(4, 1fr);
-  margin: auto 30px;
+  justify-items: center;
+  padding: 50px;
 }
 .section-one .box1 .icons {
   display: flex;
@@ -76,12 +77,13 @@ body {
   align-items: center;
   text-align: center;
   flex-direction: row;
-  width: 125px;
-  height: 125px;
-  margin: 2px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  transition: box-shadow 0.3s ease;
-}
-.section-one .box1 .icons:hover {
+  width: 100px;
+  height: 100px;
   box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
+  transition: box-shadow 0.3s ease;
+  margin-right: 0;
+}
+.section-one .box2 {
+  padding: auto 100px;
+  margin: auto 50px;
 }/*# sourceMappingURL=style.css.map */

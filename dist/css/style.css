@@ -18,6 +18,47 @@ body {
   visibility: hidden;
 }
 
+.space {
+  min-height: 20vh;
+  width: 100%;
+}
+
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: row;
+  background-color: #FF3366;
+  border: 0;
+  font-weight: 600;
+  color: #fff;
+  margin-top: 40px;
+  font-family: "DM Sans";
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.btn .icon {
+  font-size: 15px;
+  margin-left: 10px;
+}
+
+.grid-overlay {
+  position: absolute;
+  inset: 0;
+  opacity: 0.1;
+  background-image: linear-gradient(#fff 1px, transparent 1px), linear-gradient(90deg, #fff 1px, transparent 1px);
+  background-size: 20px 20px;
+  width: 40%;
+  height: 60%;
+  left: 45%;
+  -webkit-mask-image: linear-gradient(to bottom, rgb(0, 0, 0) 80%, rgba(0, 0, 0, 0) 100%), linear-gradient(to right, rgb(0, 0, 0) 80%, rgba(0, 0, 0, 0) 100%), linear-gradient(to left, rgb(0, 0, 0) 80%, rgba(0, 0, 0, 0) 100%);
+          mask-image: linear-gradient(to bottom, rgb(0, 0, 0) 80%, rgba(0, 0, 0, 0) 100%), linear-gradient(to right, rgb(0, 0, 0) 80%, rgba(0, 0, 0, 0) 100%), linear-gradient(to left, rgb(0, 0, 0) 80%, rgba(0, 0, 0, 0) 100%);
+  -webkit-mask-composite: source-in, xor;
+          mask-composite: intersect;
+}
+
 .section-one {
   display: flex;
   justify-content: center;
@@ -44,26 +85,6 @@ body {
 .section-one .box .text-subheading {
   font-weight: 100;
   margin: auto 15px;
-}
-.section-one .box .btn {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  flex-direction: row;
-  background-color: #FF3366;
-  border: 0;
-  font-weight: 600;
-  color: #fff;
-  margin-top: 40px;
-  font-family: "DM Sans";
-  padding: 10px 15px;
-  border-radius: 5px;
-  cursor: pointer;
-}
-.section-one .box .btn .icon {
-  font-size: 15px;
-  margin-left: 10px;
 }
 .section-one .box1 {
   display: grid;
@@ -95,20 +116,6 @@ body {
   width: 100vw;
   overflow: hidden;
   background: radial-gradient(ellipse at 85% 100%, #fff 5%, #007AFF 15%, rgba(255, 255, 255, 0.8) 25%, #007AFF 35%, #6B1065 45%, rgba(107, 16, 101, 0.7) 90%);
-}
-.section-two .grid-overlay {
-  position: absolute;
-  inset: 0;
-  opacity: 0.1;
-  background-image: linear-gradient(#fff 1px, transparent 1px), linear-gradient(90deg, #fff 1px, transparent 1px);
-  background-size: 20px 20px;
-  width: 40%;
-  height: 60%;
-  left: 45%;
-  -webkit-mask-image: linear-gradient(to bottom, rgb(0, 0, 0) 80%, rgba(0, 0, 0, 0) 100%), linear-gradient(to right, rgb(0, 0, 0) 80%, rgba(0, 0, 0, 0) 100%), linear-gradient(to left, rgb(0, 0, 0) 80%, rgba(0, 0, 0, 0) 100%);
-          mask-image: linear-gradient(to bottom, rgb(0, 0, 0) 80%, rgba(0, 0, 0, 0) 100%), linear-gradient(to right, rgb(0, 0, 0) 80%, rgba(0, 0, 0, 0) 100%), linear-gradient(to left, rgb(0, 0, 0) 80%, rgba(0, 0, 0, 0) 100%);
-  -webkit-mask-composite: source-in, xor;
-          mask-composite: intersect;
 }
 .section-two .container {
   max-width: 1200px;
@@ -222,4 +229,37 @@ body {
   padding-left: 25px;
   color: #D9D9D9;
   font-weight: 200;
+}
+
+.section-three {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  min-height: 100vh;
+  min-width: 100vw;
+  background: radial-gradient(ellipse at 20% 0%, #fff, rgba(255, 255, 255, 0.6) 10%, rgba(0, 122, 255, 0.5) 30%, transparent 50%), radial-gradient(circle at 100% 0%, #fff, rgba(255, 255, 255, 0.5) 10%, rgba(0, 122, 255, 0.4) 20%, transparent 30%);
+  background-color: #000743; /* Fallback background */
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.section-three .grid-overlay {
+  width: 40%;
+  height: 60%;
+  left: 70%;
+}
+.section-three .section-three-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  max-width: 30%;
+}
+.section-three .section-three-content h1 {
+  font-size: 3.5rem;
+  line-height: 1;
+  color: #fff;
 }/*# sourceMappingURL=style.css.map */

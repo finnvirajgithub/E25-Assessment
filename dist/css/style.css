@@ -131,7 +131,7 @@ body {
 .section-two .container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 80px 20px;
+  padding: 80px 0;
   position: relative;
   z-index: 1;
 }
@@ -151,7 +151,7 @@ body {
 }
 .section-two .container .ai-auto .ai-auto-text h1 {
   color: #fff;
-  font-size: 45px;
+  font-size: 3rem;
   font-weight: bold;
   margin-bottom: 2rem;
 }
@@ -180,22 +180,22 @@ body {
 }
 .section-two .container .ai-auto .tablet-container {
   position: relative;
-  width: 500px;
+  width: 45%;
   height: 400px;
 }
 .section-two .container .ai-auto .tablet-container .tablet-mockup {
   position: absolute;
-  width: 300px;
+  width: 400px;
   height: 500px;
 }
 .section-two .container .ai-auto .tablet-container .tablet-back {
-  top: -50%;
-  right: 0;
+  top: -40%;
+  right: -10%;
   z-index: 1;
 }
 .section-two .container .ai-auto .tablet-container .tablet-front {
-  top: 30px;
-  right: 150px;
+  top: 10%;
+  right: 20%;
   z-index: 2;
 }
 .section-two .container .ai-auto .tablet-container .tablet-content {
@@ -221,14 +221,14 @@ body {
 .section-two .container .ai-auto .tablet-container .tablet-front-content {
   width: 100%;
   height: 100%;
-  background: radial-gradient(ellipse at 10% 65%, #000743 70%, #007AFF, #fff 85%);
+  background: radial-gradient(ellipse at 10% 75%, #000743 70%, #007AFF, #fff 85%);
 }
 .section-two .container .ai-auto .tablet-container .tablet-front-content h3 {
-  font-size: 1.75rem;
+  font-size: 2.5rem;
   line-height: 1;
   text-align: left;
-  padding-left: 25px;
-  padding-top: 60%;
+  padding-left: 10%;
+  padding-top: 50%;
   padding-bottom: 20px;
   font-weight: bold;
   background-image: linear-gradient(43deg, #FF3366, #A86DB7, #39CCCC 70%);
@@ -237,9 +237,9 @@ body {
 }
 .section-two .container .ai-auto .tablet-container .tablet-front-content h6 {
   font-size: 1rem;
-  padding-right: 30%;
+  padding-right: 50%;
   text-align: left;
-  padding-left: 25px;
+  padding-left: 10%;
   color: #D9D9D9;
   font-weight: 200;
 }

@@ -142,7 +142,7 @@ body {
   align-items: center;
   text-align: center;
   flex-direction: row;
-  gap: 10px;
+  gap: 5%;
 }
 .section-two .container .ai-auto .ai-auto-text {
   flex: 1;

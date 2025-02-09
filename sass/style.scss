@@ -59,7 +59,6 @@ body {
     height: 60%;
     left: 45%;
     mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 80%, rgba(0,0,0,0) 100%),
-                linear-gradient(to right, rgba(0,0,0,1) 80%, rgba(0,0,0,0) 100%),
                 linear-gradient(to left, rgba(0,0,0,1) 80%, rgba(0,0,0,0) 100%);
     mask-composite: intersect;
 }
@@ -67,13 +66,12 @@ body {
 .section-one {
     @include flex-center(row);
     color: $font-color;
-    width: 100vw;
+    width: 100%;
     height: 100vh;
     font-size: 25px;
 
     .box {
         @include flex-center(column);
-        flex: 1;
         
         .text-heading {
             line-height: 1;
@@ -92,21 +90,28 @@ body {
         grid-template-columns: repeat(3, 1fr);
         grid-template-rows: repeat(4, 1fr);
         justify-items: center;
-        padding: 50px;
+        gap: 10px;
+        width: 30%;
+        padding: 40px;
 
         .icons {
             @include flex-center(row);
-            width: 100px;
-            height: 100px;
+            width: 90px;
+            height: 90px;
             box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15); 
             transition: box-shadow 0.3s ease;
             margin-right: 0;
+
+            img {
+                width: 50%;
+            }
             
         }
     }
 
     .box2 {
-        padding: auto 100px;
+        width: 30%;
+        padding: auto 50px;
         margin: auto 50px;
     }
 }
@@ -114,7 +119,7 @@ body {
 .section-two {
     position: relative;
     max-height: 80vh;
-    width: 100vw;
+    width: 100%;
     overflow: hidden;
     background: 
     radial-gradient(
@@ -255,7 +260,7 @@ body {
     position: relative;
     @include flex-center(column);
     min-height: 100vh;                      
-    min-width: 100vw;
+    width: 100%;
     background: 
         radial-gradient(ellipse at 20% 0%,$color-white, rgba($color-white, 0.6) 10%, rgba($color-primary-blue, 0.5) 30%, transparent 50%),
         radial-gradient(circle at 100% 0%,$color-white, rgba($color-white, 0.5) 10%, rgba($color-primary-blue, 0.4) 20%, transparent 30%);
@@ -265,9 +270,9 @@ body {
         background-repeat: no-repeat;
 
         .grid-overlay {
-            width: 40%;
+            width: 25%;
             height: 60%;
-            left: 70%;
+            left: 75%;
         }
         
 

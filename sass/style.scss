@@ -7,6 +7,7 @@
 @mixin flex-center($direnction){
     display: flex;
     justify-content: center;
+    justify-items: center;
     align-items: center;
     text-align: center;
     flex-direction: $direnction;
@@ -63,6 +64,21 @@ body {
     mask-composite: intersect;
 }
 
+.box {
+    @include flex-center(column);
+    
+    .text-heading {
+        line-height: 1;
+        margin-bottom: 20px;
+    }
+
+    .text-subheading {
+        font-weight: 100;
+        margin: auto 15px ;
+    }
+
+}
+
 .section-one {
     @include flex-center(row);
     color: $font-color;
@@ -70,20 +86,7 @@ body {
     height: 100vh;
     font-size: 25px;
 
-    .box {
-        @include flex-center(column);
-        
-        .text-heading {
-            line-height: 1;
-            margin-bottom: 20px;
-        }
-
-        .text-subheading {
-            font-weight: 100;
-            margin: auto 15px ;
-        }
-
-    }
+    
 
     .box1 {
         display: grid;
@@ -257,17 +260,55 @@ body {
 }
 
 .section-three {
-    position: relative;
-    @include flex-center(column);
-    min-height: 100vh;                      
+    position: relative; 
+    max-height: 100vh;                      
     width: 100%;
-    background: 
-        radial-gradient(ellipse at 20% 0%,$color-white, rgba($color-white, 0.6) 10%, rgba($color-primary-blue, 0.5) 30%, transparent 50%),
-        radial-gradient(circle at 100% 0%,$color-white, rgba($color-white, 0.5) 10%, rgba($color-primary-blue, 0.4) 20%, transparent 30%);
+    overflow: hidden;
+    background:linear-gradient(135deg,$color-primary-blue, $color-blue);
 
-        background-color: $color-blue; /* Fallback background */
-        background-size: cover;
-        background-repeat: no-repeat;
+        #up {
+            position: absolute;
+            height: 800px;
+            width: 800px;
+            border-radius: 50%;
+            background-image: linear-gradient(80deg,$color-white,$color-primary-blue);
+            filter: blur(80px);
+            animation: down 30s 1s infinite;
+        }
+
+        #down {
+            position: absolute;
+            right: 0;
+            height: 500px;
+            width: 500px;
+            border-radius: 50%;
+            background-image: linear-gradient(80deg,$color-white,rgba($color-primary-blue, 0.8));
+            filter: blur(80px);
+            animation: up 35s .5s infinite;
+        }
+
+        #left {
+            position: absolute;
+            height: 500px;
+            width: 500px;
+            border-radius: 50%;
+            background-image: linear-gradient(80deg,$color-white 10%,rgpa($color-primary-blue,0.8));
+            filter: blur(80px);
+            animation: left 40s 1s infinite;
+        }
+
+        #right {
+            position: absolute;
+            bottom: 0;
+            height: 500px;
+            width: 500px;
+            border-radius: 50%;
+            background-image: linear-gradient(80deg,$color-white 5%,$color-primary-blue);
+            filter: blur(80px);
+            animation: right 50s 1s infinite;
+        }
+
+
 
         .grid-overlay {
             width: 25%;
@@ -277,9 +318,13 @@ body {
         
 
     .section-three-content {
-        @include flex-center(column);
-        max-width: 30%;
+        @include flex-center(row);
         
+        .box {
+            max-width: 30%;
+            height: 100vh;
+            z-index: 3;
+        }
 
         h1{
             font-size: 3.5rem;
@@ -287,5 +332,42 @@ body {
             color: $color-white;
         }
         
+    }
+}
+
+@keyframes down {
+    0%, 100% {
+        top: -20px;
+    }
+    70% {
+        top: 700px;
+        right: 500px;
+    }
+}
+
+@keyframes up {
+    0%, 100% {
+        bottom: -100px;
+    }
+    70% {
+        bottom: 700px;
+    }
+}
+
+@keyframes left {
+    0%, 100% {
+        left: -100px;
+    }
+    70% {
+        left: 700px;
+    }
+}
+
+@keyframes right {
+    0%, 100% {
+        right: -100px;
+    }
+    70% {
+        right: 1300px;
     }
 }
